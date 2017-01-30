@@ -1,8 +1,8 @@
-FROM debian:8.2
+FROM debian:8
 MAINTAINER Julian Waller <julian@tech.guildtv.co.uk>
 
 RUN apt-get update && \
-  apt-get install -y git curl rsyslog cron supervisor nginx \
+  apt-get install -y git curl rsyslog cron supervisor nginx mediainfo \
     php5-fpm php-pear php-xml-parser php5-cli php5-common php5-curl php5-gd php5-intl php5-json php5-mcrypt php5-mysqlnd php5-readline && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/lib/apt/cache/*.deb
 
